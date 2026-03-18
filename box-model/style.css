@@ -1,5 +1,8 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
 }
 
 body{
@@ -17,17 +20,11 @@ body{
     border-radius: 10px;
 }
 
-.area{
-    position: relative;
-    width: 650px;
-    height: 500px;
+header{
+    background-color: cyan;
+    width: 100%;
 
-    border: 5px solid green;
-}
 
-.area-absolute{
-    position: absolute;
+    position: sticky;
     top: 0;
-    right: 0;
-    border: 5px solid blue;
 }
