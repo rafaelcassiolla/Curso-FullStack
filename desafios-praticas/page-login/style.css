@@ -16,6 +16,43 @@ body{
     line-height: 18px;
 }
 
-main{
+.container{
+    height: 100vh;
+    margin: 0 auto;
+    min-height: 100%;
     display: flex;
+}
+
+.column{
+    flex-grow: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.left{
+    background-color: var(--white);
+}
+
+.right{
+    background-color: var(--blue);
+    height: 100%;
+    display: flex;
+}
+
+.right img{
+    width: 420px;
+    margin-bottom: 40px;
+}
+
+.img-text{
+    width: 420px;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+.img-text h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 40px;
 }
