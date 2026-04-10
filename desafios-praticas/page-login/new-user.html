@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Pagina Login</title>
+    <title>Pagina Nova Conta</title>
 </head>
 <body>
 
@@ -12,9 +12,11 @@
 
         <div class="column left">
             <div class="new-user">
-                <h1>Minha conta</h1>
+                <h1>Nova conta</h1>
 
                 <form action="">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Nome completo" required>
 
                     <label for="email"></label>
                     <input type="email" name="email" id="email" placeholder="Digite seu email" required>
@@ -22,9 +24,14 @@
                     <label for="password"></label>
                     <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
 
-                    <input type="submit" value="Acessar">
+                    <div class="checkbox">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms" class="checkbox">Concordo com os termos.</label>
+                    </div>
+
+                    <input type="submit" value="Criar conta">
                     
-                    <p>Novo por aqui? <a href="new-user.html">Cadastre-se.</a></p>
+                    <p>Já possui uma conta? <a href="index.html">Faça login.</a></p>
                 </form>
 
             </div>

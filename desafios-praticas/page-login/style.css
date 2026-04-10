@@ -34,6 +34,75 @@ body{
     background-color: var(--white);
 }
 
+.new-user{
+    padding: 20px;
+    width:530px;
+    margin: 0 auto;
+}
+
+.new-user h1{
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    height: 40px;
+    margin-top: 20px;
+    padding: 10px;
+} 
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder{
+    color: var(--black);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.378);
+}
+
+.checkbox{
+    display:flex;
+    margin-top: 15px;
+}
+
+.checkbox label{
+    padding-left: 10px;
+    margin-top: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="submit"]{
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    margin-top: 15px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+form p{
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form > p > a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 100;
+}
+
+form > p > a:hover {
+    font-weight: bold;
+}
 .right{
     background-color: var(--blue);
     height: 100%;
@@ -41,13 +110,14 @@ body{
 }
 
 .right img{
-    width: 420px;
+    width:100%;
     margin-bottom: 40px;
 }
 
 .img-text{
-    width: 420px;
+    width:510px;
     margin: 0 auto;
+    padding: 20px;
     color: var(--white);
 }
 
@@ -55,4 +125,15 @@ body{
     margin-bottom: 30px;
     font-size: 40px;
     line-height: 40px;
+}
+
+@media (max-width: 660px){
+    .container{
+        flex-direction: column;
+    }
+
+    .column{
+        width: 100%;
+        min-height: 100%;
+    }
 }
