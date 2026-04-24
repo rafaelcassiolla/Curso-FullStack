@@ -1,41 +1,56 @@
-var area = document.getElementById("area")
 
-function entrar(){
-    var nome = prompt("DIgite seu nome:");
+//  while = enquanto
 
-    if(nome === "" || nome === null){
-        alert("Ops, algo deu errado!")
-        area.innerHTML = "Clique no botão para acessar..."
-    } else{
-        area.innerHTML = "Bem vindo " + nome + " ";
+// var x = 1;
 
-        let botaoSair = document.createElement("button");
-        botaoSair.innerHTML = "Sair da conta";
-        botaoSair.onclick = sair;
+// while(x < 11){
+//     document.write("<br> O valor do X é: " + x);
 
-        area.appendChild(botaoSair);
+//     x++;
+// 
 
+// for = para
+
+// var valor = 30;
+
+// for(a = 1; a <= valor; a++){
+//     document.write("<br> valor do A é: " + a);
+// }
+
+// switch = caso
+
+function pedir(){
+    var valor = prompt("Digite um valor de 1 a 4");
+
+    switch(Number(valor)){
+        case 1: 
+            document.write("Voce escolheu 1 = Suco");
+            break;
+
+        case 2:
+            alert("Voce escolheu 2 = Agua gelada");
+            break;
+
+        case 3:
+            alert("Voce escolheu 3 = Sorvete");
+            break;
+
+        case 4:
+            alert("Voce escolheu 4 = chamar garçom");
+            break;
+
+        default:
+            alert("Escolha uma opção entre 1 a 4");
+            break;
     }
 }
 
-function sair(){
-    alert("Até mais!");
-    area.innerHTML = "Você saiu!"
-}
+// CONDICIONAIS: se/senao.
 
-function mediaAluno(nota1, nota2){
-    var media = (nota1 + nota2) / 2;
+var valor = 20;
 
-
-    if(media >= 7){
-        console.log("Aluno aprovado com a média: " + media)
-    } else if(media < 7){
-        console.log("Aluno reprovado com a média: " + media)
-    }
-}
-
-function aluno(nome, curso){
-    var mensagem = "Seja bem vindo " + nome + " ao curso de " + curso;
-
-    console.log(mensagem);
+if(valor == 30){
+    console.log("O valor é igual a 30!")
+} else{
+    console.log("Numero diferente de 30!")
 }
