@@ -1,17 +1,21 @@
+//FIND
 
+// let numbers = [5, "mateus", 15, "jose", 25];
 
-// function convidados (...nomes){
-//     console.log("Lista de convidados:");
-//     console.log(nomes);
-// }
+// let busca = numbers.find((item) => {
+//    if (item === "jose") {
+//        return console.log("encontrou o nome jose");
+//    }
+// });
 
-// convidados("Maria", "João", "Ana", "Carlos");
+// console.log(busca); //jose
 
-function sorteador(...numeros) {
-    console.log(numeros);
+let palavras = ["casa", "carro", "moto", "bicicleta"];
 
-    const numeroSorteado = Math.floor(Math.random() * numeros.length);
-    console.log(numeros[numeroSorteado]);
-}
+let busca = palavras.filter((item) => {
+    if (item.length <= 5) {
+        return console.log("encontrou a palavra " + item);
+    }
+});
 
-sorteador(5, 10, 15, 20);
+console.log(busca); // ["casa", "carro", "moto"]
