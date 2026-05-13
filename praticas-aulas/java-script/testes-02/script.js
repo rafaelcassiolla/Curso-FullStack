@@ -1,21 +1,41 @@
-//FIND
 
-// let numbers = [5, "mateus", 15, "jose", 25];
+let listElement = document.querySelector('#app');
 
-// let busca = numbers.find((item) => {
-//    if (item === "jose") {
-//        return console.log("encontrou o nome jose");
-//    }
-// });
+let posts = [];
 
-// console.log(busca); //jose
+function nutriApp(){
+    
+    fetch("https://sujeitoprogramador.com/rn-api/?api=posts")
+    .then((response) => response.json())
+    .then((json) => {
+        posts = json;
 
-let palavras = ["casa", "carro", "moto", "bicicleta"];
+        posts.map((item) => {
+            let liElement = document.createElement('li');
+            let titleElement = document.createElement('strong');
+            let imgElement = document.createElement('img');
+            let descriptionElement = document.createElement('a');
 
-let busca = palavras.filter((item) => {
-    if (item.length <= 5) {
-        return console.log("encontrou a palavra " + item);
-    }
-});
+            let titleText = document.createTextNode(item.titulo);
+            titleElement.appendChild(titleText);
+            liElement.appendChild(titleElement);
+        
+            imgElement.src = item.capa;
+            liElement.appendChild(imgElement);
 
-console.log(busca); // ["casa", "carro", "moto"]
+            let descriptionText = document.createTextNode(item.subtitulo);
+            descriptionElement.appendChild(descriptionText);
+            liElement.appendChild(descriptionElement);
+
+            listElement.appendChild(liElement);
+        
+        });
+
+    })
+    .catch((error) => {
+        console.log("Deu erro: " + error);
+    });
+
+}
+
+nutriApp();
